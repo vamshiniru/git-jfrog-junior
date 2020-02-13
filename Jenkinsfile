@@ -35,7 +35,7 @@ pipeline {
                        "files": [
                             {
                               "pattern": " /var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
-                              "target": "My_task"
+                              "target": "My_task/"
                             }
                                 ]
                     }"""
