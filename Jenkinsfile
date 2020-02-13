@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy Artifacts') { 
              steps {
                 script {			 
-                     def server = Artifactory.server 'jfro' 
+                     def server = Artifactory.server 'My_task' 
                      def uploadSpec = """{
                        "files": [
                             {
