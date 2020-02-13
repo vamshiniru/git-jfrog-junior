@@ -30,12 +30,12 @@ pipeline {
         stage('Deploy Artifacts') { 
              steps {
                 script {			 
-                     def server = Artifactory.server 'My_task' 
+                     def server = Artifactory.server 'artifactory' 
                      def uploadSpec = """{
                        "files": [
                             {
                               "pattern": " /var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
-                              "target": "myrepo/"
+                              "target": "My_task"
                             }
                                 ]
                     }"""
