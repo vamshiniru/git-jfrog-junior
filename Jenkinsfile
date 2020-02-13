@@ -26,15 +26,14 @@ pipeline {
                 echo 'all test cases passed'
           }
         }
-        
         stage('Deploy Artifacts') { 
-             steps {
-                script {			 
+            steps {
+              script {			 
                      def server = Artifactory.server 'artifactory' 
                      def uploadSpec = """{
                        "files": [
                             {
-                              "pattern": " /var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
+                              "pattern": "/var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
                               "target": "My_task/"
                             }
                                 ]
