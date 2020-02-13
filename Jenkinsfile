@@ -34,7 +34,7 @@ pipeline {
                      def uploadSpec = """{
                        "files": [
                             {
-                              "pattern": "/var/lib/jenkins/workspace/MyTestJob/target/*.war",
+                              "pattern": " /var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
                               "target": "myrepo/"
                             }
                                 ]
