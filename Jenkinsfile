@@ -29,12 +29,12 @@ pipeline {
         stage('Deploy Artifacts') { 
             steps {
               script {			 
-                     def server = Artifactory.server 'artifactory' 
+                     def server = Artifactory.server 'jfrog' 
                      def uploadSpec = """{
                        "files": [
                             {
                               "pattern": "/var/lib/jenkins/workspace/file1_master/target/mvn-hello-world.war",
-                              "target": "My_task/"
+                              "target": "myrepo/"
                             }
                                 ]
                     }"""
